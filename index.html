@@ -129,9 +129,9 @@ header .sub{font-size:11px;color:#ffe399;font-weight:700;margin-top:2px}
 
     <div class="label">Chronomètre par question</div>
     <div class="pills" data-group="timer">
-      <button class="pill" type="button" data-v="0">Sans limite</button>
-      <button class="pill" type="button" data-v="7">7 s</button>
-      <button class="pill active" type="button" data-v="10">10 s</button>
+      <button class="pill" type="button" data-v="10">10 s</button>
+      <button class="pill" type="button" data-v="15">15 s</button>
+      <button class="pill" type="button" data-v="20">20 s</button>
     </div>
 
     <div class="label">Type de défis</div>
@@ -230,7 +230,7 @@ function loadSettings(){
   if([3,5,8].includes(s.target))S.target=s.target;
   if([1,2,3].includes(s.rivals))S.rivals=s.rivals;
   if(ACC[s.diff])S.diff=s.diff;
-  if([0,7,10].includes(s.timer))S.timer=s.timer;
+  if([10,15,20].includes(s.timer))S.timer=s.timer;
   if(['mix','choice','order','pairs'].includes(s.mode))S.mode=s.mode;
   if(typeof s.sound==='boolean')S.sound=s.sound;
 }
